@@ -1,12 +1,10 @@
-import { Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import CurrencySection from "./components/CurrencySection";
 
 export default function Index() {
   return (
     <SafeAreaView>
-      <View>
-        <Text>Check</Text>
-      </View>
+      <CurrencySection />
     </SafeAreaView>
   );
 }
