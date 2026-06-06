@@ -1,11 +1,13 @@
-import { Text, View } from "react-native";
+import { currencies } from "@/data/currencies";
+import { View } from "react-native";
+import CurrencyCard from "./CurrencyCard";
 
 export default function CurrencyList() {
   return (
     <View>
-      <Text>Currency 1</Text>
-      <Text>Currency 2</Text>
-      <Text>Currency 3</Text>
+      {currencies.map((res) => (
+        <CurrencyCard resource={res} key={res.id} />
+      ))}
     </View>
   );
 }
