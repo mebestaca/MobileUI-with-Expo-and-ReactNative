@@ -1,5 +1,5 @@
 import { SafeAreaView } from "react-native-safe-area-context";
-import CurrencySection from "./components/CurrencySection";
+import CurrencySection from "./components/currency/CurrencySection";
 
 export default function Index() {
   return (
