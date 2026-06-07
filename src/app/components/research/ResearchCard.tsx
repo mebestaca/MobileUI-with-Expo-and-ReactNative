@@ -18,8 +18,8 @@ export default function ResearchCard({ resource }: Props) {
     timerLeft,
     queued,
     rushed,
+    progress,
   } = resource;
-
   return (
     <View style={styles.cardContainer}>
       {/* Header / Lab Slot */}
@@ -64,10 +64,23 @@ export default function ResearchCard({ resource }: Props) {
               ? require("../../assets/queue_image.png")
               : require("../../assets/unqueue_image.png")
           }
-          style={{ height: 25, width: 25 }}
+          style={{ height: 25, width: 25, flex: 1 }}
         />
-        <Text style={styles.textStyle3}>Time Left: {timerLeft}</Text>
-        <Text style={styles.speedUpText}>Speed Up</Text>
+
+        <View style={styles.progressBorder}>
+          <Text style={styles.textStyle3}>Time Left: {timerLeft}</Text>
+          <View
+            style={{
+              height: "100%",
+              backgroundColor: "#52d6a4",
+              width: `${progress}%`,
+              position: "absolute",
+            }}
+          />
+        </View>
+        <Pressable style={{ flex: 1 }}>
+          <Text style={styles.speedUpText}>Speed Up</Text>
+        </Pressable>
       </View>
     </View>
   );
@@ -140,6 +153,7 @@ const styles = StyleSheet.create({
     marginRight: 5,
   },
   footerContainer: {
+    alignItems: "center",
     padding: 8,
     borderTopWidth: 1,
     borderColor: "#265C50",
@@ -169,8 +183,23 @@ const styles = StyleSheet.create({
   },
 
   speedUpText: {
+    borderWidth: 2,
+    borderColor: "white",
+    paddingLeft: 25,
+    paddingRight: 25,
     color: "white",
     fontSize: 15,
     fontWeight: "600",
+  },
+
+  progressBorder: {
+    borderWidth: 2,
+    borderColor: "white",
+    paddingRight: 20,
+    paddingLeft: 20,
+    marginLeft: 2,
+    marginRight: 2,
+    flex: 3,
+    height: 25,
   },
 });
