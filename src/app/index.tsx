@@ -10,7 +10,7 @@ export default function Index() {
     <SafeAreaView style={{ flex: 1 }}>
       <CurrencySection />
       <LabSection />
-      <ScrollView style={{ flex: 1 }}>
+      <ScrollView contentContainerStyle={{ paddingBottom: 27 }}>
         <ResearchSection />
       </ScrollView>
       <BottomNavSection />
