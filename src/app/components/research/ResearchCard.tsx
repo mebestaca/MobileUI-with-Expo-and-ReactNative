@@ -78,7 +78,7 @@ export default function ResearchCard({ resource }: Props) {
               position: "absolute",
             }}
           />
-          <Text style={styles.textStyle5}>Time Left: {timerLeft}</Text>
+          <Text style={styles.textStyle5}>{timerLeft}</Text>
         </View>
         <Pressable>
           <Text style={styles.speedUpText}>Speed Up</Text>
@@ -186,7 +186,7 @@ const styles = StyleSheet.create({
   textStyle5: {
     color: "white",
     fontSize: 15,
-    paddingLeft: 30,
+    paddingLeft: 70,
   },
   speedUpText: {
     borderWidth: 2,
