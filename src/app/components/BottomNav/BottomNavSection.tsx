@@ -38,6 +38,7 @@ export default function BottomNavSection() {
         source={require("../../assets/shop_image.png")}
       />
       <Pressable
+        style={{ height: 50, backgroundColor: "white" }}
         onPress={() => {
           console.log("ALERT CLICKED");
           Alert.alert("Alert", "Alert Button pressed");
