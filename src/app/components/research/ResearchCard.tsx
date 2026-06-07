@@ -64,7 +64,7 @@ export default function ResearchCard({ resource }: Props) {
               ? require("../../assets/queue_image.png")
               : require("../../assets/unqueue_image.png")
           }
-          style={{ height: 25, width: 25, flex: 1 }}
+          style={{ height: 25, width: 25 }}
         />
 
         <View style={styles.progressBorder}>
@@ -78,7 +78,7 @@ export default function ResearchCard({ resource }: Props) {
             }}
           />
         </View>
-        <Pressable style={{ flex: 1 }}>
+        <Pressable>
           <Text style={styles.speedUpText}>Speed Up</Text>
         </Pressable>
       </View>
@@ -185,8 +185,8 @@ const styles = StyleSheet.create({
   speedUpText: {
     borderWidth: 2,
     borderColor: "white",
-    paddingLeft: 25,
-    paddingRight: 25,
+    paddingLeft: 15,
+    paddingRight: 15,
     color: "white",
     fontSize: 15,
     fontWeight: "600",
