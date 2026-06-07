@@ -1,13 +1,21 @@
-import { Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 
 export default function BottomNavSection() {
   return (
-    <View>
-      <Text>Check</Text>
-      <Text>Check</Text>
-      <Text>Check</Text>
-      <Text>Check</Text>
-      <Text>Check</Text>
+    <View style={styles.footer}>
+      <Text style={styles.text}>Persistent Footer</Text>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  footer: {
+    height: 60,
+    backgroundColor: "red",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  text: {
+    color: "white",
+  },
+});

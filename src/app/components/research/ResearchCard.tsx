@@ -68,7 +68,6 @@ export default function ResearchCard({ resource }: Props) {
         />
 
         <View style={styles.progressBorder}>
-          <Text style={styles.textStyle3}>Time Left: {timerLeft}</Text>
           <View
             style={{
               height: "100%",
@@ -77,6 +76,7 @@ export default function ResearchCard({ resource }: Props) {
               position: "absolute",
             }}
           />
+          <Text style={styles.textStyle5}>Time Left: {timerLeft}</Text>
         </View>
         <Pressable>
           <Text style={styles.speedUpText}>Speed Up</Text>
@@ -181,7 +181,11 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
   },
-
+  textStyle5: {
+    color: "white",
+    fontSize: 15,
+    paddingLeft: 30,
+  },
   speedUpText: {
     borderWidth: 2,
     borderColor: "white",
@@ -195,11 +199,9 @@ const styles = StyleSheet.create({
   progressBorder: {
     borderWidth: 2,
     borderColor: "white",
-    paddingRight: 20,
-    paddingLeft: 20,
     marginLeft: 2,
     marginRight: 2,
-    flex: 3,
+    flex: 1,
     height: 25,
   },
 });
