@@ -12,6 +12,7 @@ export const researchdata: Research[] = [
     cost: 1234,
     timerLeft: "19d 3h 4m 36s",
     queued: false,
+    rushed: false,
   },
   {
     id: 2,
@@ -24,6 +25,7 @@ export const researchdata: Research[] = [
     cost: 1455,
     timerLeft: "22d 22 5m 33s",
     queued: true,
+    rushed: false,
   },
   {
     id: 3,
@@ -36,6 +38,7 @@ export const researchdata: Research[] = [
     cost: 86,
     timerLeft: "23h 57m 44s",
     queued: true,
+    rushed: true,
   },
   {
     id: 4,
@@ -48,6 +51,7 @@ export const researchdata: Research[] = [
     cost: 16,
     timerLeft: "4h 15m 33s",
     queued: true,
+    rushed: true,
   },
   {
     id: 5,
@@ -60,5 +64,6 @@ export const researchdata: Research[] = [
     cost: 297,
     timerLeft: "3d 21h 4m 0s",
     queued: true,
+    rushed: true,
   },
 ];

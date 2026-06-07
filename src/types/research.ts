@@ -9,4 +9,5 @@ export interface Research {
   cost: number;
   timerLeft: string;
   queued: boolean;
+  rushed: boolean;
 }
