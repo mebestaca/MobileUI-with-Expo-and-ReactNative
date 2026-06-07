@@ -13,6 +13,7 @@ export default function CurrencyCard({ resource }: Props) {
         flexDirection: "row",
         alignItems: "center",
         marginLeft: 12,
+        gap: 5,
       }}
     >
       <Image source={image as any} style={{ height: 18, width: 18 }}></Image>
