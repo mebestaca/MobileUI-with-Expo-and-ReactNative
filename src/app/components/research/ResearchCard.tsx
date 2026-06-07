@@ -21,7 +21,7 @@ export default function ResearchCard({ resource }: Props) {
   return (
     <View>
       {/*  Lab  */}
-      <View>
+      <View style={{ backgroundColor: "red" }}>
         <Text>{slot}</Text>
         <Text>{timer}</Text>
         <Text>{multiplier}</Text>

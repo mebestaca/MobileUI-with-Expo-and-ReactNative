@@ -1,11 +1,29 @@
 import { Currency } from "@/types/currency";
-import { Text } from "react-native";
+import { Image, StyleSheet, Text, View } from "react-native";
 
 type Props = {
   resource: Currency;
 };
 
 export default function CurrencyCard({ resource }: Props) {
-  const { name, value } = resource;
-  return <Text> {value} </Text>;
+  const { name, value, image } = resource;
+  return (
+    <View
+      style={{
+        flexDirection: "row",
+        alignItems: "center",
+        marginLeft: 12,
+      }}
+    >
+      <Image source={image as any} style={{ height: 18, width: 18 }}></Image>
+      <Text style={styles.textStyle}>{value}</Text>
+    </View>
+  );
 }
+
+const styles = StyleSheet.create({
+  textStyle: {
+    color: "white",
+    fontSize: 18,
+  },
+});
