@@ -4,7 +4,7 @@ import ResearchCard from "./ResearchCard";
 
 export default function ResearchList() {
   return (
-    <View>
+    <View style={{ backgroundColor: "#111F2C" }}>
       {researchdata.map((res) => (
         <ResearchCard resource={res} key={res.id} />
       ))}

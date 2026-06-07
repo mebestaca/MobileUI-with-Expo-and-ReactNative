@@ -4,7 +4,7 @@ export const currencies: Currency[] = [
   {
     id: 1,
     name: "Coin",
-    value: "3.39q",
+    value: "3.98q",
     image: require("../app/assets/coin_image.png"),
   },
   {
