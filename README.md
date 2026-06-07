@@ -1,27 +1,28 @@
-# Assignment: Building a Mobile UI with Expo and React Native 
-This assignment is designed to get you comfortable with working in the expo environment. You will learn how to create a basic React Native project using Expo with TypeScript. You will create a button that triggers an alert when pressed. While some class time will be provided, you should also plan to invest time outside of class. Please see the course schedule and Brightspace for exact due dates. This assignment should be done in groups of 3.  
+# Assignment: Building a Mobile UI with Expo and React Native
 
-Plagiarism detection software will be used on all student submissions. Please refer to SAIT’s policies and procedures on Student Academic Conduct (A.C.3.4.3) for more information. 
+This assignment is designed to get you comfortable with working in the expo environment. You will learn how to create a basic React Native project using Expo with TypeScript. You will create a button that triggers an alert when pressed. While some class time will be provided, you should also plan to invest time outside of class. Please see the course schedule and Brightspace for exact due dates. This assignment should be done in groups of 3.
 
-## Instructions 
+Plagiarism detection software will be used on all student submissions. Please refer to SAIT’s policies and procedures on Student Academic Conduct (A.C.3.4.3) for more information.
 
-#1. Take a snapshot of your favorite mobile app. This might be an Instagram landing page, X feed or a banking app home page. Two sample snapshots are provided below. You can use one of them in this assignment. If you choose your own, the page should be similar in complexity to the sample. 
+## Instructions
 
-2. Create a new Expo project. Run: npx create-expo-app@latest . 
+#1. Take a snapshot of your favorite mobile app. This might be an Instagram landing page, X feed or a banking app home page. Two sample snapshots are provided below. You can use one of them in this assignment. If you choose your own, the page should be similar in complexity to the sample.
 
-3. Reset the project using npm run reset-project command 
+2. Create a new Expo project. Run: npx create-expo-app@latest .
 
-4. Run the application and modify the index.tsx file to achieve the following; 
+3. Reset the project using npm run reset-project command
 
- - Copy the snapshot of your favorite mobile app in your new application. Try to match the colors, button sizes and other components using the View, Button, Text and any other tag you might need. You do not have to use the same pictures as in the snapshot, just comparable pictures. Use Stylesheet from react-native to style the page. Attempt to match the snapshot at least 80%. 
+4. Run the application and modify the index.tsx file to achieve the following;
 
- - None of the copied features such as buttons need to be active or work. The cloning/copying part of the assignment is simply to give practice in using React Native tags and styling.  
+- Copy the snapshot of your favorite mobile app in your new application. Try to match the colors, button sizes and other components using the View, Button, Text and any other tag you might need. You do not have to use the same pictures as in the snapshot, just comparable pictures. Use Stylesheet from react-native to style the page. Attempt to match the snapshot at least 80%.
 
- - Add a button at the bottom of the page. Name the button “Alert”. When it is clicked, an Alert should pop up on the page that says “Alert Button pressed”. 
+- None of the copied features such as buttons need to be active or work. The cloning/copying part of the assignment is simply to give practice in using React Native tags and styling.
 
-5. Push the code to a GitHub repository in which all members of the group are collaborators. There must be at least 3 commits in the repo and all members must have contributed. The group might have to demonstrate the code in-person during the in-person class on both android and iOS.  
+- Add a button at the bottom of the page. Name the button “Alert”. When it is clicked, an Alert should pop up on the page that says “Alert Button pressed”.
 
-6. Submit your GitHub repository link and the screenshot you copied to D2L and make sure the repository has public visibility. 
+5. Push the code to a GitHub repository in which all members of the group are collaborators. There must be at least 3 commits in the repo and all members must have contributed. The group might have to demonstrate the code in-person during the in-person class on both android and iOS.
+
+6. Submit your GitHub repository link and the screenshot you copied to D2L and make sure the repository has public visibility.
 
 7. Only students who have actively contributed code and collaborated through GitHub will be eligible to receive this grade. While one student may submit the final work, the contributions of all group members must be clearly visible and verifiable in the GitHub repository.
 
@@ -30,23 +31,29 @@ Plagiarism detection software will be used on all student submissions. Please re
 The one on the left is the reference image. The one in the middle is the output of the code of this branch. The one to the right is the alert notification.
 ![alt text](https://github.com/mebestaca/MobileUI-with-Expo-and-ReactNative/blob/master/src/app/assets/finalproduct.png)
 
-## Credits 
+## Credits
 
 ### This Project from the Lab
+
 to quickly copy and paste some important patterns </br>
 https://github.com/mebestaca/week3-lab-starter
 
-### Image Color Picker 
+### Image Color Picker
+
 to quickly figure out the color of a certain pixel </br>
 https://imagecolorpicker.com/
 
-### This stackoverflow thread 
+### This stackoverflow thread
+
 to fix the ScrollView not scrolling all the way down which also causes your footer to not show up </br>
 https://stackoverflow.com/questions/45132731/cannot-scroll-to-bottom-of-scrollview-in-react-native
 
 ## Quick Reference
+
 ### Setup
+
 index.tsx
+
 ```
 import { ScrollView } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -69,7 +76,8 @@ export default function Index() {
 }
 ```
 
-_layout.tsx
+\_layout.tsx
+
 ```
 import { Stack } from "expo-router";
 
@@ -77,9 +85,11 @@ export default function RootLayout() {
   return <Stack screenOptions={{ headerShown: false }} />;
 }
 ```
+
 ### Currency Section
 
 CurrencySection.tsx
+
 ```
 import { View } from "react-native";
 import CurrencyList from "./CurrencyList";
@@ -94,6 +104,7 @@ export default function CurrencySection() {
 ```
 
 CurrencyList.tsx
+
 ```
 import { currencies } from "@/data/currencies";
 import { Image, StyleSheet, View } from "react-native";
@@ -124,6 +135,7 @@ const styles = StyleSheet.create({
 ```
 
 CurrencyCard.tsx
+
 ```
 import { Currency } from "@/types/currency";
 import { Image, StyleSheet, Text, View } from "react-native";
@@ -160,6 +172,7 @@ const styles = StyleSheet.create({
 ### Lab Section
 
 LabSection.tsx
+
 ```
 import { Image, StyleSheet, Text, View } from "react-native";
 
@@ -201,6 +214,7 @@ const styles = StyleSheet.create({
 ### Research Section
 
 ResearchSection.tsx
+
 ```
 import { View } from "react-native";
 import ResearchList from "./ResearchList";
@@ -216,6 +230,7 @@ export default function ResearchSection() {
 ```
 
 ResearchList.tsx
+
 ```
 import { researchdata } from "@/data/researchdata";
 import { View } from "react-native";
@@ -234,6 +249,7 @@ export default function ResearchList() {
 ```
 
 ResearchCard.tsx
+
 ```
 import { Research } from "@/types/research";
 import { Image, Pressable, StyleSheet, Text, View } from "react-native";
@@ -447,6 +463,7 @@ const styles = StyleSheet.create({
 ```
 
 ### Bottom Nav Section
+
 ```
 import { Alert, Image, Pressable, Text, View } from "react-native";
 
@@ -488,6 +505,7 @@ export default function BottomNavSection() {
         source={require("../../assets/shop_image.png")}
       />
       <Pressable
+        style={{ height: 50, backgroundColor: "white" }}
         onPress={() => {
           console.log("ALERT CLICKED");
           Alert.alert("Alert", "Alert Button pressed");
@@ -498,5 +516,6 @@ export default function BottomNavSection() {
     </View>
   );
 }
+
 
 ```
