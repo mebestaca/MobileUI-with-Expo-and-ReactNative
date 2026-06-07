@@ -1,4 +1,4 @@
-import { Image, View } from "react-native";
+import { Alert, Image, Pressable, Text, View } from "react-native";
 
 export default function BottomNavSection() {
   return (
@@ -37,6 +37,14 @@ export default function BottomNavSection() {
         style={{ height: 50, width: 50, flex: 1 }}
         source={require("../../assets/shop_image.png")}
       />
+      <Pressable
+        onPress={() => {
+          console.log("ALERT CLICKED");
+          Alert.alert("Alert", "Alert Button pressed");
+        }}
+      >
+        <Text>Alert</Text>
+      </Pressable>
     </View>
   );
 }

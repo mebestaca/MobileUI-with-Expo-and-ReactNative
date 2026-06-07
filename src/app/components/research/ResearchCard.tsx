@@ -1,5 +1,5 @@
 import { Research } from "@/types/research";
-import { Alert, Image, Pressable, StyleSheet, Text, View } from "react-native";
+import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 
 type Props = {
   resource: Research;
@@ -44,7 +44,6 @@ export default function ResearchCard({ resource }: Props) {
         <Pressable
           onPress={() => {
             console.log("ALERT CLICKED");
-            Alert.alert("Alert", "Alert Button pressed");
           }}
           style={rushed ? styles.rushButton2 : styles.rushButton}
         >
