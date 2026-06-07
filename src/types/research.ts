@@ -10,4 +10,5 @@ export interface Research {
   timerLeft: string;
   queued: boolean;
   rushed: boolean;
+  progress: number;
 }
