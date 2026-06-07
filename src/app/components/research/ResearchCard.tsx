@@ -1,5 +1,6 @@
+import { currencies } from "@/data/currencies";
 import { Research } from "@/types/research";
-import { Pressable, Text, View } from "react-native";
+import { Pressable, Text, View, StyleSheet } from "react-native";
 
 type Props = {
   resource: Research;
@@ -19,37 +20,76 @@ export default function ResearchCard({ resource }: Props) {
     queued,
   } = resource;
   return (
-    <View>
+    <View style={styles.base}>
       {/*  Lab  */}
-      <View>
-        <Text>{slot}</Text>
-        <Text>{timer}</Text>
-        <Text>{multiplier}</Text>
+      <View style={styles.labbox}>
+        <Text style={styles.text}>{slot}</Text>
+        {/* separation of title and timer*/}
+        <View>
+          <Text style={styles.text}>{timer}</Text>
+          <Text style={styles.text}>{multiplier}</Text>
+        </View>
       </View>
 
       {/* Name */}
-      <View>
+      <View style={styles.labCont}>
         <View>
           <View>
-            <Text>{name}</Text>
-            <Text>
+            <Text style={styles.text}>{name}</Text>
+            <Text style={styles.text}>
               {statOld} {">>"} {statNew}
             </Text>
           </View>
+          {/* rushbox */}
           <View>
             <Pressable onPress={() => console.log("Button pressed!")}>
-              <Text>Rush</Text>
-              <Text>{cost}</Text>
+              <Text style={styles.text}>Rush</Text>
+              <Text style={styles.currency}>{cost}</Text>
             </Pressable>
           </View>
         </View>
       </View>
-
+      {/* timer */}
       <View>
-        <Text>{queued}</Text>
-        <Text>{timerLeft}</Text>
-        <Text>Speed Up</Text>
+        <Text style={styles.text}>{queued}</Text>
+        <Text style={styles.text}>{timerLeft}</Text>
+        <Text style={styles.text}>Speed Up</Text>
       </View>
     </View>
   );
 }
+
+// style={styles.rushbox}
+
+const styles = StyleSheet.create({
+  labCont: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    padding: 3,
+    backgroundColor: "#1B2430",
+    color: "#ffffff",
+  },
+  text: {
+    color: "#ffffff",
+    fontSize: 15,
+    fontWeight: "semibold",
+  },
+  currency: {
+    color: "#ffffff",
+    fontSize: 15,
+    fontWeight: "bold",
+    borderWidth: 1,
+    borderColor: "#344C5F",
+    textAlign: "center",
+    backgroundColor: "#1E2B3E",
+  },
+  labbox: {
+    backgroundColor: "#243C36",
+    borderWidth: 1,
+    borderColor: "#5A9B7F",
+  },
+
+  base: {
+    backgroundColor: "#1C1D2D",
+  },
+});
